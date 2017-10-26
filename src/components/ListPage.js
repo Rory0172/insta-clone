@@ -31,6 +31,15 @@ class ListPage extends React.Component {
 
     return (
       <div className={'w-100 flex justify-center pa6' + blurClass}>
+      <div>
+      <h2>List of descriptions</h2>
+      <lu>
+        {this.props.data.allPosts.map(post => (
+          <li>{post.description}</li>
+          )
+          )}
+        </lu>
+        </div>
         <div className='w-100 flex flex-wrap' style={{maxWidth: 1150}}>
           <Link
             to='/create'

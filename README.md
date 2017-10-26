@@ -1,19 +1,5 @@
 # React & Apollo Quickstart
 
-* [React](https://facebook.github.io/react/): Frontend framework for building user interfaces
-* [Apollo Client](https://github.com/apollographql/apollo-client): Fully-featured, production ready caching GraphQL client
-* [Graphcool](https://www.graph.cool): Backend development framework based on GraphQL + Serverless
-
-## Example
-
-![](http://imgur.com/3S6fUeI.gif)
-
-## Quickstart
-
-<!--
-For more information on how to get started [refer to the full react-apollo-instagram tutorial](https://www.graph.cool/docs/quickstart/react-apollo-instagram/) or watch the corresponding [video](https://www.youtube.com/watch?v=OoPQl8hcIug).
--->
-
 ### 1. Clone example repository
 
 ```sh
@@ -29,18 +15,6 @@ npm install -g graphcool@next
 
 # Create a new service inside a directory called `server`
 graphcool init server
-```
-
-This created the following file structure in the current directory:
-
-```
-.
-└── server
-    ├── graphcool.yml
-    ├── types.graphql
-    └── src
-        ├── hello.graphql
-        └── hello.js
 ```
 
 ### 3. Define data model
@@ -74,18 +48,9 @@ graphcool deploy
 
 Save the HTTP endpoint for the `Simple API` from the output, you'll need it in the next step.
 
-> **Note**: You can now test your GraphQL API inside a GraphQL playground. Simply type the `graphcool playground` command and start sending queries and mutations.
-
 ### 5. Connect the frontend app with your GraphQL API
 
 Paste the `Simple API` endpoint from the previous step to `./src/index.js` as the `uri` argument in the `createNetworkInterface` call:
-
-```js
-// replace `__SIMPLE_API_ENDPOINT__` with the endpoint from the previous step
-const networkInterface = createNetworkInterface({ uri: '__SIMPLE_API_ENDPOINT__' })
-```
-
-> **Note**: If you ever lose your endpoint, you can get access to it again with the `graphcool info` command.
 
 ### 6. Install dependencies & run locally
 
@@ -95,18 +60,5 @@ yarn install
 yarn start # open http://localhost:3000 in your browser
 ```
 
-## Next steps
-
-* [Documentation](https://docs-next.graph.cool)
-* [Advanced GraphQL features](https://www.graph.cool/docs/tutorials/advanced-features-eath7duf7d/)
-* [Authentication & Permissions](https://www.graph.cool/docs/reference/authorization/overview-iegoo0heez/)
-* [Implementing business logic with serverless functions](https://www.graph.cool/docs/reference/functions/overview-boo6uteemo/)
-
-
-## Help & Community [![Slack Status](https://slack.graph.cool/badge.svg)](https://slack.graph.cool)
-
-Say hello in our [Slack](http://slack.graph.cool/) or visit the [Graphcool Forum](https://www.graph.cool/forum) if you run into issues or have questions. We love talking to you!
-
-![](http://i.imgur.com/5RHR6Ku.png)
 
 
